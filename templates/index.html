@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>しりとりアプリ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>ようこそ、しりとりアプリへ！</h1>
+    <p>あなたの最初の単語を入力してください（'り'から始まります）。</p>
+
+    <div id="game-container">
+        <div id="messages">
+            {% if initial_cpu_word %}
+            <p><strong>CPU:</strong> {{ initial_cpu_word.heading }}</p>
+            {% endif %}
+        </div>
+
+        <form id="shiritori-form">
+            <input type="text" id="user-word" name="word" placeholder="あなたの単語を入力..." required>
+            <button type="submit">送信</button>
+            <button type="button" id="give-up-button">降参</button>
+        </form>
+
+        <p id="error-message" style="color: red; display: none;">エラーメッセージ</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>
+        // この部分は app.py で初期単語を渡すように変更したので、不要になりました
+        // addMessage('CPU', 'りんご');
+    </script>
+</body>
+</html>

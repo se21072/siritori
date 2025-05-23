@@ -1,0 +1,89 @@
+/* static/style.css */
+body {
+	font-family: sans-serif;
+	margin: 20px;
+	background-color: #f4f4f4;
+}
+
+h1 {
+	color: #3498db;
+	/* 鮮やかな青 */
+	text-align: center;
+}
+
+p {
+	color: #555;
+}
+
+#game-container {
+	max-width: 600px;
+	margin: 30px auto;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#messages {
+	border: 1px solid #ddd;
+	padding: 15px;
+	min-height: 150px;
+	max-height: 300px;
+	/* スクロール可能にする */
+	overflow-y: auto;
+	margin-bottom: 20px;
+	background-color: #e9ecef;
+	border-radius: 4px;
+}
+
+#messages p {
+	margin: 5px 0;
+	line-height: 1.5;
+}
+
+#shiritori-form {
+	display: flex;
+	gap: 10px;
+}
+
+#user-word {
+	flex-grow: 1;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+}
+
+#shiritori-form button {
+	padding: 10px 15px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 16px;
+	transition: background-color 0.3s ease;
+}
+
+#shiritori-form button[type="submit"] {
+	background-color: #28a745;
+	/* 緑 */
+	color: white;
+}
+
+#shiritori-form button[type="submit"]:hover {
+	background-color: #218838;
+}
+
+#give-up-button {
+	background-color: #dc3545;
+	/* 赤 */
+	color: white;
+}
+
+#give-up-button:hover {
+	background-color: #c82333;
+}
+
+#error-message {
+	margin-top: 10px;
+	font-weight: bold;
+}
